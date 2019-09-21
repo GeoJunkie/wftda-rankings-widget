@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="league-wftda-ranking">
+    <serverData>
+      <paths name="league-wftda-ranking">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/wp-content/plugins/league-wftda-ranking" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
