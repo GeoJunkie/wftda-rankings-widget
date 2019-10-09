@@ -73,6 +73,7 @@ class League_Wftda_Ranking_Widget extends WP_Widget {
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
 		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? sanitize_text_field( $new_instance['title'] ) : '';
+		$instance['league'] = ( ! empty( $new_instance['league'] ) ) ? sanitize_text_field( $new_instance['league'] ) : '';
 
 		return $instance;
 	}

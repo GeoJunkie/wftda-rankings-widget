@@ -88,6 +88,7 @@ class League_Wftda_Ranking_Options
      */
     public function get_league_info($slug) {
       if (in_array($slug, $this->options)){
+      	
         foreach ($this->options['wrw_leagues'] as $this_league => $league) {
           if ($this_league == $slug) {
             return $league;
