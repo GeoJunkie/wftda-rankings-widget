@@ -79,8 +79,10 @@ class League_Wftda_Ranking_League {
    * @return array League Data
    */
     public function refresh() {
-      $stats_site = "https://stats.wftda.com";
-      $url = "$stats_site/league/" . $this->slug;
+      $this->league_data['slug'] = $this->slug;
+
+      $stats_site = get_option('wrw_site_url');
+      $url = get_option('wrw_leagues_url') . $this->slug;
       $curl = curl_init($url);
 
       curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -162,8 +164,22 @@ class League_Wftda_Ranking_League {
           $this->league_data['win_loss_info'][] = $node->nodeValue;
       }
 
-      save();
+      $this->save();
 
+    }
+
+       /**
+    * Get League Data.
+    *
+    * Returns the league's data
+    *
+    * @since 1.0.0
+    *
+    * @return array League data.
+    */
+    public function get_league_data()
+    {
+      return $this->league_data;
     }
 
    /**
@@ -181,11 +197,11 @@ class League_Wftda_Ranking_League {
     if ($this->league_data) {
       $now = time();
       $interval = sprintf("%dH", get_option( 'wrw_refresh_hours'));
-      if ($now > $this->league_data['last_update'] + date_add($interval)) {
-        refresh();
+      if ($now > $this->league_data['last_update'] + $this->date_add($interval)) {
+        $this->refresh();
       }
     } else {
-      refresh();
+      $this->refresh();
     }
     return $this->league_data;
   }

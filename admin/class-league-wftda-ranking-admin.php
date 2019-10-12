@@ -100,16 +100,4 @@ class League_Wftda_Ranking_Admin {
 
 	}
 
-	/**
-	 * Register the widgets
-	 *
-	 * @since    1.0.0
-	 */
-	public function register_widgets() {
-
-	    register_widget( 'League_Wftda_Ranking_Widget' );
-
-	}
-
-
 }

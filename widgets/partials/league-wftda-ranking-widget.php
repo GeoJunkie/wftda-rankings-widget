@@ -14,3 +14,9 @@
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
+
+<p class="league-wfdta-name"><?php echo $league_data['league'] ?></p>
+<img class="league_wftda-logo" src="<?php echo get_option('wrw_site_url') . $league_data['logo'] ?>"/>
+<div class="league-wftda-gpa"><strong>GPA:</strong> <?php echo $league_data['game_point_average'] ?></div>
+<div class="league-wftda-strength-factor"><strong>SF:</strong> <?php echo $league_data['strength_factor'] ?></div>
+<div class="league-wftda-world-ranking"><?php echo $league_data['world_ranking']?></div>

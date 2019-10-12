@@ -42,8 +42,12 @@ class League_Wftda_Ranking_Widget extends WP_Widget {
 		}
 
 		$league = new League_Wftda_Ranking_League($instance['league']);
+		$league_data = $league->get_league_data();
 
-		echo esc_html__( 'Hello, World!', 'text_domain' );
+		// TODO: Allow settings to activate/deactivate these
+
+		include('partials/league-wftda-ranking-widget.php');
+
 		echo $args['after_widget'];
 	}
 
