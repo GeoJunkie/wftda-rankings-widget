@@ -95,7 +95,7 @@ class League_Wftda_Ranking_Options
           if ($this_league == $slug) {
             return $league;
           }
-          // If we reached here, the slug's not here (in case the slug pased mathed something else)
+          // If we reached here, the slug's not here (in case the slug pased matched something else)
           return false;
         }
       } else {
@@ -113,6 +113,9 @@ class League_Wftda_Ranking_Options
      * @param array info The league information array.
     */
     public function set_league_info($info) {
+      if (!is_array($this->options['wrw_leagues'])){
+        $this->options['wrw_leagues'] = [];
+      }
       $this->options['wrw_leagues'][$info['slug']] = $info;
       update_option( 'wrw_leagues', $info );
     }
