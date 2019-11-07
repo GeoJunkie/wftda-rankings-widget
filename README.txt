@@ -70,6 +70,11 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 = 1.0.0 =
 * In Progress
+* Prerelease complete. Next steps:
+    Integrate shortcode
+    Add widget options:
+        Activate/deactivate sections
+        Show last refresh with ability to manually refresh
 
 == Upgrade Notice ==
 

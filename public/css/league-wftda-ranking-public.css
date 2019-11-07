@@ -2,3 +2,107 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+
+ .lwr-stats {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     justify-content: center;
+ }
+
+ .lwr-league {
+     display: grid;
+     grid-template-columns: 1fr 2fr;
+     grid-template-rows: 1fr;
+ }
+
+.lwr-league-name-location {
+    margin: auto;
+}
+
+/* TODO: Fix this: https://cld.wthms.co/sClKgn/w14oz8iQEf */
+
+.lwr-league-image {
+    max-height: 0;
+}
+
+ .lwr-league-name {
+    /* font-size: 2vw; */
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+
+.lwr-league-name::after {
+    clear: left;
+}
+
+.lwr-location {
+    color: #696969;
+    font-style: italic;
+    margin: 0 0 1rem;
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+.lwr-location::after {
+    clear: both;
+}
+
+.lwr-all-stats {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.lwr-statistics {
+    /* font-size: 0.9rem; */
+    font-weight: 700;
+    /* line-height: 2.8; */
+}
+
+.lwr-world-ranking, .lwr-regional-ranking {
+    color: #f5a2c6;
+    font-weight: 700;
+}
+
+.lwr-win-losses {
+    padding: 16px ;
+    margin: auto;
+}
+
+.lwr-win-loss, .lwr-info-button {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    color: #fff;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    margin: 0 2px;
+}
+
+.lwr-win-loss-l {
+    background: #e58686;
+}
+
+.lwr-win-loss-w {
+    background: #86c880;
+}
+
+.lwr-info-button {
+    background: #A89FE3;
+}
+
+.lwr-info-button:hover {
+    background: #f5a2c6;
+}
+
+.lwr-info-popup {
+    display: none;
+}
+
+.league-wfda-stats-link {
+    margin: auto;
+}

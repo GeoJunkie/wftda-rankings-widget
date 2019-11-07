@@ -14,10 +14,37 @@
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
+<div class="lwr-stats">
+	<div class="lwr-league">
+		<div class="lwr-widget-image">
+			<a href="<?php echo $url ?>"><img class="league_wftda-logo" src="<?php echo get_option('lwr_site_url') . $league_data['logo'] ?>" /></a>
+		</div>
+		<div class="lwr-league-name-location">
+		<div class="lwr-league-name"><?php echo $league_data['league'] ?></div>
+		<div class="lwr-location"><?php echo $league_data['location'] ?></div>
+		</div>
+	</div>
+	<div class="lwr-all-stats">
+		<div class="lwr-statistics">
+			<span class="lwr-gpa">GPA: <?php echo $league_data['game_point_average'] ?></span>
+			<span class="lwr-strength-factor">SF: <?php echo $league_data['strength_factor'] ?></span>
+			<div class="lwr-info-button">i</button>
+				<div class="lwr-info-popup">
+					<?php echo get_option('lwr_gpa_sf_explanation') ?>
+				</div>
+			</div>
+		</div>
+		<div class="lwr-world-ranking"><?php echo $league_data['world_ranking'] ?></div>
+		<div class="lwr-regional-ranking"><?php echo $league_data['regional_ranking'] ?></div>
+		<div class="lwr-win-losses">
+			<?php
+			foreach ($league_data['win_loss_info'] as $game_result) { ?>
 
-<p class="league-wfdta-name"><?php echo $league_data['league'] ?></p>
-<a href="<?php $url ?>"><img class="league_wftda-logo" src="<?php echo get_option('wrw_site_url') . $league_data['logo'] ?>"/></a>
-<div class="league-wftda-gpa"><strong>GPA:</strong> <?php echo $league_data['game_point_average'] ?></div>
-<div class="league-wftda-strength-factor"><strong>SF:</strong> <?php echo $league_data['strength_factor'] ?></div>
-<div class="league-wftda-world-ranking"><?php echo $league_data['world_ranking']?></div>
-<a class="league-wfda-stats-link" href="<?php $url ?>">View full stats</a>
+				<span class="lwr-win-loss lwr-win-loss-<?php echo $game_result ?>"><?php echo $game_result ?></span>
+			<?php } ?>
+		</div>
+	</div>
+	<div class="league-wfda-stats-link">
+		<a href="<?php echo $url ?>">View full stats</a>
+	</div>
+</div>

@@ -76,6 +76,7 @@ class League_Wftda_Ranking_Public
 		 */
 
 		wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/league-wftda-ranking-public.css', array(), $this->version, 'all');
+		
 	}
 
 	/**
