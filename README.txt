@@ -68,18 +68,21 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 == Changelog ==
 
-= 1.0.0 =
-* In Progress
-* Prerelease complete. Next steps:
+= 0.1.0 =
+* Functional prerelease complete. Next steps:
     Integrate shortcode
     Add widget options:
         Activate/deactivate sections
         Show last refresh with ability to manually refresh
+    Admin page:
+        Reset/uninstall
+        Global options (reset interval, refresh all)
+    Complete README and submit to WP.org
 
 == Upgrade Notice ==
 
-= 1.0.0 =
-Once this is made, you should install it
+= 0.1.0 =
+First functional widget ready to post
 
 == Arbitrary section ==
 

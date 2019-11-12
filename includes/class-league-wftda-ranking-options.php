@@ -146,8 +146,9 @@ class League_Wftda_Ranking_Options
    * @param string $gpa_sf_explanation The text from the site.
    */
   public function set_gpa_sf_explanation($gpa_sf_explanation)
-  {
-    if ($this->options['lwr_gpa_sf_explanation'] != $gpa_sf_explanation) {
+  { 
+    if (!array_key_exists('lwr_gpa_sf_explanation', $this->options) 
+    || $this->options['lwr_gpa_sf_explanation'] != $gpa_sf_explanation) {
       $this->options['lwr_gpa_sf_explanation'] = $gpa_sf_explanation;
       update_option('lwr_gpa_sf_explanation', $gpa_sf_explanation);
     }
