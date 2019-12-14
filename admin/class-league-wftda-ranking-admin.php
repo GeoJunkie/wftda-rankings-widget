@@ -18,7 +18,7 @@
  *
  * @package    League_Wftda_Ranking
  * @subpackage League_Wftda_Ranking/admin
- * @author     Mike Straw (aka Stray Taco) <stray.taco@ohiorollergirls.com>
+ * @author     Mike Straw (aka Stray Taco) <stray.taco@ohiorollerderby.com>
  */
 class League_Wftda_Ranking_Admin {
 
@@ -100,4 +100,25 @@ class League_Wftda_Ranking_Admin {
 
 	}
 
+	/**
+	 * Display the admin page
+	 * 
+	 * @since 1.0.0
+	 */
+	public function display_admin_page()
+	{
+		if (!current_user_can( 'manage_options' )) {
+			return;
+		}
+		include_once(plugin_dir_path( __FILE__ ) . 'partials/league-wftda-ranking-admin-display.php');
+	}
+
+	/**
+	 * Create hook for the admin page
+	 * 
+	 * @since 1.0.0
+	 */
+	public function add_admin_page() {
+		add_options_page( 'League WFTDA Rankings', 'League WFTDA Rankings', 'manage_options', 'league-wftda-ranking', array($this, 'display_admin_page'));
+	}
 }

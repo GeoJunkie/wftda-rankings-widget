@@ -18,7 +18,7 @@
  *
  * @package    League_Wftda_Ranking
  * @subpackage League_Wftda_Ranking/public
- * @author     Mike Straw (aka Stray Taco) <stray.taco@ohiorollergirls.com>
+ * @author     Mike Straw (aka Stray Taco) <stray.taco@ohiorollerderby.com>
  */
 class League_Wftda_Ranking_Public
 {
