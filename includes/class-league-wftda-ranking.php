@@ -25,7 +25,7 @@
  * @since      1.0.0
  * @package    League_Wftda_Ranking
  * @subpackage League_Wftda_Ranking/includes
- * @author     Mike Straw (aka Stray Taco) <stray.taco@ohiorollergirls.com>
+ * @author     Mike Straw (aka Stray Taco) <stray.taco@ohiorollerderby.com>
  */
 class League_Wftda_Ranking {
 
@@ -173,7 +173,7 @@ class League_Wftda_Ranking {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-
+		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_admin_page' );
 	}
 
 	/**
