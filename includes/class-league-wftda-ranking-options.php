@@ -43,7 +43,7 @@ class League_Wftda_Ranking_Options
     $this->options_list = array(
       'lwr_leagues' => '',        // An array of the stored leagues (see $league_info)
       'lwr_refresh_hours' => 24,  // Number of hours before retrieving updated league information
-      'gpa_sf_explanation' => '',  // Explanation of GPA and SF from stats.wftda.com (refreshes with league info)
+      'lwr_gpa_sf_explanation' => '',  // Explanation of GPA and SF from stats.wftda.com (refreshes with league info)
       'lwr_site_url' => 'https://stats.wftda.com', // Root URL for the WFTDA Stats Site
       'lwr_leagues_url' => 'https://stats.wftda.com/league/' // Base URL for WFTDA leagues
     );

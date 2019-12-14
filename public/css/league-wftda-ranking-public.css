@@ -3,18 +3,18 @@
  * included in this file.
  */
 
- .lwr-stats {
-     display: flex;
-     flex-direction: column;
-     width: 100%;
-     justify-content: center;
- }
+.lwr-stats {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
 
- .lwr-league {
-     display: grid;
-     grid-template-columns: 1fr 2fr;
-     grid-template-rows: 1fr;
- }
+.lwr-league {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+}
 
 .lwr-league-name-location {
     margin: auto;
@@ -26,7 +26,7 @@
     max-height: 0;
 }
 
- .lwr-league-name {
+.lwr-league-name {
     /* font-size: 2vw; */
     font-weight: 700;
     margin: 0;
@@ -66,7 +66,7 @@
 }
 
 .lwr-win-losses {
-    padding: 16px ;
+    padding: 16px;
     margin: auto;
 }
 
@@ -93,16 +93,84 @@
 
 .lwr-info-button {
     background: #A89FE3;
+    cursor: pointer;
 }
 
 .lwr-info-button:hover {
     background: #f5a2c6;
 }
 
-.lwr-info-popup {
-    display: none;
-}
-
 .league-wfda-stats-link {
     margin: auto;
 }
+
+.lwr-hidden {
+    display:none;
+}
+
+.lwr-overlay {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: 
+
+    hsla(0,0%,100%,.5);
+    z-index: 100;
+    transition: opacity .3s ease-in-out;
+
+}
+
+.lwr-popup {
+    pointer-events: none;
+    position: fixed;
+    z-index: 1040;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    animation: growIn 0.3s ease-out;
+    animation-fill-mode: forwards;
+  }
+  
+  .lwr-popup-content {
+    padding: 1rem 1.25rem 2rem;
+    pointer-events: auto;
+    position: relative;
+    top: 50%;
+    margin: 0 1rem;
+    transform: translateY(-50%);
+    max-height: calc(100% - 2rem);
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: white;
+  }
+
+  @media screen and (min-width: 530px) {
+    .lwr-popup-content {
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: 640px) {
+    .lwr-popup-content {
+      padding: 1rem 2rem 2rem;
+    }
+  }
+
+  .lwr-popup-content .lwr-popup-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  .lwr-popup-content p {
+    line-height: 1.6;
+  }

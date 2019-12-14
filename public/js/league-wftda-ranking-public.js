@@ -1,4 +1,4 @@
-(function( $ ) {
+(function ($) {
 	'use strict';
 
 	/**
@@ -29,4 +29,23 @@
 	 * practising this, we should strive to set a better example in our own work.
 	 */
 
-})( jQuery );
+	$(document).ready(function () {
+		$('.lwr-info-button').click(showPopup);
+
+		$('.lwr-overlay').click(hidePopup);
+
+		$('.lwr-popup-close').click(hidePopup);
+	});
+
+	var hidePopup = function() {
+		$('.lwr-overlay').addClass('lwr-hidden');
+		$('.lwr-popup').addClass('lwr-hidden');
+	}
+	
+	var showPopup = function() {
+		$('.lwr-overlay').removeClass('lwr-hidden');
+		$('.lwr-popup').removeClass('lwr-hidden');
+	}
+
+})(jQuery);
+

@@ -20,8 +20,8 @@
 			<a href="<?php echo $url ?>"><img class="league_wftda-logo" src="<?php echo get_option('lwr_site_url') . $league_data['logo'] ?>" /></a>
 		</div>
 		<div class="lwr-league-name-location">
-		<div class="lwr-league-name"><?php echo $league_data['league'] ?></div>
-		<div class="lwr-location"><?php echo $league_data['location'] ?></div>
+			<div class="lwr-league-name"><?php echo $league_data['league'] ?></div>
+			<div class="lwr-location"><?php echo $league_data['location'] ?></div>
 		</div>
 	</div>
 	<div class="lwr-all-stats">
@@ -29,9 +29,6 @@
 			<span class="lwr-gpa">GPA: <?php echo $league_data['game_point_average'] ?></span>
 			<span class="lwr-strength-factor">SF: <?php echo $league_data['strength_factor'] ?></span>
 			<div class="lwr-info-button">i</button>
-				<div class="lwr-info-popup">
-					<?php echo get_option('lwr_gpa_sf_explanation') ?>
-				</div>
 			</div>
 		</div>
 		<div class="lwr-world-ranking"><?php echo $league_data['world_ranking'] ?></div>
@@ -46,5 +43,15 @@
 	</div>
 	<div class="league-wfda-stats-link">
 		<a href="<?php echo $url ?>">View full stats</a>
+	</div>
+	<div class="lwr-last-update lwr-hidden">
+		<?php echo date('D, d M Y H:i:s', $league_data['last_update']); ?>
+	</div>
+</div>
+<div class="lwr-overlay lwr-hidden"></div>
+<div class="lwr-popup lwr-hidden">
+	<div class="lwr-popup-content"> 
+		<img class="lwr-popup-close" src="<?php echo plugin_dir_url(__DIR__); ?>img/close.svg" />
+		<?php echo get_option('lwr_gpa_sf_explanation') ?>
 	</div>
 </div>
