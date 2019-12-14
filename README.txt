@@ -58,6 +58,12 @@ An answer to that question.
 
 Answer to foo bar dilemma.
 
+== Frequently Asked Questions ==
+
+= Question goes here
+
+Answer goes here
+
 == Screenshots ==
 
 1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
@@ -74,7 +80,7 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 Still do do:
 * Uninstall add
-* Updat option naming conventions
+* Update option naming conventions
 * Options listed in 0.1.0
 
 This will all be added as GitHub issues/projects
