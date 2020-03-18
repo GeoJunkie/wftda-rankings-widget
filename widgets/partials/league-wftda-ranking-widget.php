@@ -17,7 +17,7 @@
 <div class="lwr-stats">
 	<div class="lwr-league">
 		<div class="lwr-widget-image">
-			<a href="<?php echo $url ?>"><img class="league_wftda-logo" src="<?php echo get_option('lwr_site_url') . $league_data['logo'] ?>" /></a>
+			<a href="<?php echo $url ?>"><img class="league_wftda-logo" src="<?php echo get_option('site_url') . $league_data['logo'] ?>" /></a>
 		</div>
 		<div class="lwr-league-name-location">
 			<div class="lwr-league-name"><?php echo $league_data['league'] ?></div>
@@ -52,6 +52,6 @@
 <div class="lwr-popup lwr-hidden">
 	<div class="lwr-popup-content"> 
 		<img class="lwr-popup-close" src="<?php echo plugin_dir_url(__DIR__); ?>img/close.svg" />
-		<?php echo get_option('lwr_gpa_sf_explanation') ?>
+		<?php echo get_option('gpa_sf_explanation') ?>
 	</div>
 </div>

@@ -45,7 +45,7 @@ class League_Wftda_Ranking_Widget extends WP_Widget {
 		$league_data = $league->get_league_data();
 
 		// TODO: Allow settings to activate/deactivate these
-		$url = get_option('lwr_leagues_url') . $league_data['slug'];
+		$url = get_option('leagues_url') . $league_data['slug'];
 
 		include('partials/league-wftda-ranking-widget.php');
 

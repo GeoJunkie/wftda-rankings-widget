@@ -81,8 +81,8 @@ class League_Wftda_Ranking_League {
     public function refresh() {
       $this->league_data['slug'] = $this->slug;
 
-      $stats_site = get_option('lwr_site_url');
-      $url = get_option('lwr_leagues_url') . $this->slug;
+      $stats_site = get_option('site_url');
+      $url = get_option('leagues_url') . $this->slug;
       $curl = curl_init($url);
 
       curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -188,7 +188,7 @@ class League_Wftda_Ranking_League {
    /**
     * Load League Data.
     *
-    * Loads the league's data. If the data is not in the database or has not been refreshed in less than 'lwr_refresh_hours' hours, it will read the updated information from stats.wftda.com
+    * Loads the league's data. If the data is not in the database or has not been refreshed in less than 'refresh_hours' hours, it will read the updated information from stats.wftda.com
     *
     * @since 1.0.0
     *
@@ -199,7 +199,7 @@ class League_Wftda_Ranking_League {
     $this->league_data = $options->get_league_info($this->slug);
     if ($this->league_data) {
       $now = time();
-      $interval = sprintf("%dH", get_option( 'lwr_refresh_hours'));
+      $interval = sprintf("%dH", get_option( 'refresh_hours'));
       if ($now > $this->league_data['last_update'] + $this->date_add($interval)) {
         $this->refresh();
       }
