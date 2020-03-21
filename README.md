@@ -1,16 +1,17 @@
-=== Plugin Name ===
-Contributors: GeoJunkie
-Donate link: https://www.paypal.com/paypalme/my/profile
-Tags: comments, spam
-Requires at least: 3.0.1
-Tested up to: 3.4
-Stable tag: 4.3
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+# Plugin Name 
+**Contributors:** GeoJunkie  
+**Donate link:** https://www.paypal.com/paypalme/my/profile  
+**Tags:** comments, spam  
+**Requires at least:** 3.0.1  
+**Tested up to:** 3.4  
+**Stable tag:** 4.3  
+**License:** GPLv2 or later  
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
 A widget to show a WFTDA league's ranking information in a widget.
 
-== Description ==
+
+## Description 
 
 Add a widget to your site with the WFTDA stats from stats.wftda.com.
 
@@ -32,39 +33,51 @@ There are measures in place to ensure we don't overload the stats site:
 * Add hooks for extendability
 * Convert to API when available
 
-== Installation ==
+
+## Installation 
 
 1. Install directly from WordPress.org, upload `league-wftda-ranking.zip` under **Plugins > Add New**, or install via WP-CLI using `wp plugin install league-wftda-ranking`
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Add the widget in the Customizer
 1. The League Slug should match the portion of the address of your league's stats after the last slash. e.g., if the address for your league's stats page is `https://stats.wftda.com/league/super-fantastic-derby`, enter `super-fantastic-derby` under League Slug
 
-== Frequently Asked Questions ==
 
-= What if it doesn't work? =
+## Frequently Asked Questions 
+
+
+### What if it doesn't work? 
 
 * Make sure it's installed properly
 * Make sure your site can read external URLs
 * Activate WP_DEBUG and check for any errors
 * Ask on the support forums
 
-= Can I help make the plugin better? =
+
+### Can I help make the plugin better? 
 
 * Absolutely! You can contribute [on GitHub](https://github.com/GeoJunkie/league-wftda-ranking)
 
-== Screenshots ==
 
-1. The widget as it appears on the page
-2. Widget settings
+## Screenshots 
 
-== Changelog ==
+### 1. The widget as it appears on the page
+![](assets/screenshot-1.png)
 
-= 1.0.0 =
+### 2. Widget settings
+![](assets/screenshot-2.png)
+
+
+## Changelog 
+
+
+### 1.0.0 
 
 * The initial release 
 
-== Upgrade Notice ==
 
-= 1.0.0 = 
+## Upgrade Notice 
+
+
+### 1.0.0 
 Initial plugin release
 
