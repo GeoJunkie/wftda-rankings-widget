@@ -83,26 +83,17 @@ class League_Wftda_Ranking_League {
 
       $stats_site = get_option('lwr_site_url');
       $url = get_option('lwr_leagues_url') . $this->slug;
-      $curl = curl_init($url);
 
-      curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+      $response = wp_remote_get($url);
 
-      $page = curl_exec($curl);
+      $body = wp_remote_retrieve_body($response);
 
-      if (curl_errno($curl)) { // check for execution errors
-          return 'Scraper error: ' . curl_error($curl);
-          exit;
-      }
-
-      curl_close($curl);
-
-      $site_file = file_get_contents($url);
       $dom = new domDocument;
 
       // set error level to prevent DOMDoc known warnings
       $internalErrors = libxml_use_internal_errors(true);
 
-      $dom->loadHTML($site_file);
+      $dom->loadHTML($body);
 
       // Restore error level
       libxml_use_internal_errors($internalErrors);
@@ -200,7 +191,7 @@ class League_Wftda_Ranking_League {
     if ($this->league_data) {
       $now = time();
       $interval = sprintf("%dH", get_option( 'lwr_refresh_hours'));
-      if ($now > $this->league_data['last_update'] + $this->date_add($interval)) {
+      if (date_add($now, $interval) > $this->league_data['last_update']) {
         $this->refresh();
       }
     } else {

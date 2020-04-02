@@ -117,7 +117,7 @@ class League_Wftda_Ranking_Options
         if ($this_league == $slug) {
           return $league;
         }
-        // If we reached here, the slug's not here (in case the slug pased matched something else)
+        // If we reached here, the slug's not here (in case the slug passed matched something else)
         return false;
       }
     } else {
