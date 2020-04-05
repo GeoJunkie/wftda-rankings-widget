@@ -59,11 +59,19 @@ There are measures in place to ensure we don't overload the stats site:
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.0.1 - 2020-04-05 =
+
+* Converted to HTTP API
+* Updated league data storage to prevent refreshes on every page load
+
+= 1.0.0 - 2020-03-21 =
 
 * The initial release 
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Release to WordPress.org
 
 = 1.0.0 = 
 Initial plugin release
