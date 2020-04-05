@@ -111,15 +111,15 @@ class League_Wftda_Ranking_Options
    */
   public function get_league_info($slug)
   {
-    if (in_array($slug, $this->options)) {
+    if (array_key_exists($slug, $this->options['lwr_leagues'])) {
 
       foreach ($this->options['lwr_leagues'] as $this_league => $league) {
         if ($this_league == $slug) {
           return $league;
         }
         // If we reached here, the slug's not here (in case the slug passed matched something else)
-        return false;
       }
+      return false;
     } else {
       return false;
     }
@@ -140,7 +140,7 @@ class League_Wftda_Ranking_Options
       $this->options['lwr_leagues'] = [];
     }
     $this->options['lwr_leagues'][$info['slug']] = $info;
-    update_option('lwr_leagues', $info);
+    update_option('lwr_leagues', $this->options['lwr_leagues']);
   }
 
   /**

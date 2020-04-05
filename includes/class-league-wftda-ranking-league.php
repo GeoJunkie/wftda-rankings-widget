@@ -189,9 +189,9 @@ class League_Wftda_Ranking_League {
     $options = new League_Wftda_Ranking_Options;
     $this->league_data = $options->get_league_info($this->slug);
     if ($this->league_data) {
-      $now = time();
-      $interval = sprintf("%dH", get_option( 'lwr_refresh_hours'));
-      if (date_add($now, $interval) > $this->league_data['last_update']) {
+      $hours_since_update = (time() - $this->league_data['last_update']) / 3600;
+      
+      if ($hours_since_update > get_option( 'lwr_refresh_hours')) {
         $this->refresh();
       }
     } else {
