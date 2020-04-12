@@ -1,6 +1,6 @@
-=== Plugin Name ===
-Contributors: GeoJunkie
-Tags: comments, spam
+=== WFTDA Rankings Widget ===
+Contributors: mikestraw
+Tags: roller derby, wftda, sports, rankings, stats
 Requires at least: 3.0.1
 Tested up to: 5.4
 Stable tag: 4.3
@@ -18,6 +18,7 @@ Currently, the widget will scrape the data from http://stats.wftda.com/league/{l
 **This plugin was developed by a roller derby referee, fan, and league member. It isn't approved of, endorsed, or part of the Women's Flat Track Derby Association (WFTDA). I just made this to meet a need in my own league and wanted to share it.**
 
 There are measures in place to ensure we don't overload the stats site:
+
  * We won't use live stats unless and until the API has a good way to do that
  * Rankings for each league will be stored locally when first retrieved and then refreshed only if the data is over 24 hours old
 
@@ -33,7 +34,7 @@ There are measures in place to ensure we don't overload the stats site:
 
 == Installation ==
 
-1. Install directly from WordPress.org, upload `league-wftda-ranking.zip` under **Plugins > Add New**, or install via WP-CLI using `wp plugin install league-wftda-ranking`
+1. Install directly from WordPress.org, upload `wftda-rankings-widget.zip` under **Plugins > Add New**, or install via WP-CLI using `wp plugin install wftda-rankings-widget`
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Add the widget in the Customizer
 1. The League Slug should match the portion of the address of your league's stats after the last slash. e.g., if the address for your league's stats page is `https://stats.wftda.com/league/super-fantastic-derby`, enter `super-fantastic-derby` under League Slug
@@ -57,6 +58,11 @@ There are measures in place to ensure we don't overload the stats site:
 2. Widget settings
 
 == Changelog ==
+
+= 1.0.2 - 2020-04-12 =
+
+* Readme updates
+* Renamed files to match assigned slug
 
 = 1.0.1 - 2020-04-05 =
 
