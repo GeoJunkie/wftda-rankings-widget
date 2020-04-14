@@ -62,7 +62,6 @@ There are measures in place to ensure we don't overload the stats site:
 = 1.0.2 - 2020-04-12 =
 
 * Readme updates
-* Renamed files to match assigned slug
 
 = 1.0.1 - 2020-04-05 =
 

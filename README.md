@@ -47,7 +47,6 @@ Widget settings
 ## Changelog
 ### 1.0.2 - 2020-04-12
 * Readme updates
-* Renamed files to match assigned slug
 ### 1.0.1 - 2020-04-05
 * Converted to HTTP API
 * Updated league data storage to prevent refreshes on every page load
