@@ -3,7 +3,7 @@
 **Tags:** roller derby, wftda, sports, rankings, stats
 **Requires at least:** 3.0.1
 **Tested up to:** 5.4
-**Stable tag:** 4.3
+**Stable tag:** 1.0.1
 **License:** GPLv2 or later
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,12 +47,15 @@ Widget settings
 ## Changelog
 ### 1.0.2 - 2020-04-12
 * Readme updates
+* Added an icon
 ### 1.0.1 - 2020-04-05
 * Converted to HTTP API
 * Updated league data storage to prevent refreshes on every page load
 ### 1.0.0 - 2020-03-21
 * The initial release
 ## Upgrade Notice
+### 1.0.2
+Update to WordPress.org information. Strictly cosmetic
 ### 1.0.1
 Release to WordPress.org
 ### 1.0.0
