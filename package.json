@@ -1,0 +1,48 @@
+{
+	"name": "wftda-rankings-widget",
+	"version": "2.0.0",
+	"description": "A widget to show a WFTDA league's ranking information.",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "wp-env start",
+		"stop": "wp-env stop",
+		"restart": "wp-env stop && wp-env start",
+		"update": "wp-env start --update",
+		"dbreset": "wp-env clean all",
+		"destroy": "wp-env destroy",
+		"xdebug": "wp-env start --xdebug=profile,trace,debug"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/GeoJunkie/wftda-rankings-widget.git"
+	},
+	"author": "Mike Straw",
+	"license": "GPL-2.0-or-later",
+	"bugs": {
+		"url": "https://github.com/GeoJunkie/wftda-rankings-widget/issues"
+	},
+	"homepage": "https://github.com/GeoJunkie/wftda-rankings-widget#readme",
+	"devDependencies": {
+		"@wordpress/env": "^4.0.5",
+		"eslint": "^7.29.0",
+		"eslint-config-wordpress": "^2.0.0",
+		"prettier": "^2.3.1",
+		"prettier-eslint": "^12.0.0",
+		"prettier-stylelint": "^0.4.2",
+		"stylelint": "^13.13.1",
+		"stylelint-config-wordpress": "^17.0.0",
+		"stylelint-order": "^4.1.0"
+	},
+	"browserslist": [
+		"> 1%",
+		"ie >= 11",
+		"last 1 Android versions",
+		"last 1 ChromeAndroid versions",
+		"last 2 Chrome versions",
+		"last 2 Firefox versions",
+		"last 2 Safari versions",
+		"last 2 iOS versions",
+		"last 2 Edge versions",
+		"last 2 Opera versions"
+	]
+}

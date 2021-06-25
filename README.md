@@ -1,2 +1,3 @@
-# wftda-rankings-widget
- A widget to show a WFTDA league's ranking information.
+# WFTDA Rankings Widget
+
+This README file is for developers. [You can find the plugin's README here.](readme.txt)
