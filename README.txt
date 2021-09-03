@@ -2,7 +2,7 @@
 Contributors: mikestraw
 Tags: roller derby, wftda, sports, rankings, stats
 Requires at least: 3.0.1
-Tested up to: 5.5
+Tested up to: 5.8
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -21,6 +21,8 @@ There are measures in place to ensure we don't overload the stats site:
 
  * We won't use live stats unless and until the API has a good way to do that
  * Rankings for each league will be stored locally when first retrieved and then refreshed only if the data is over 24 hours old
+
+ [See the widget in action](https://ohiorollerderby.com).
 
 ## Future enhancements
 
