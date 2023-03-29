@@ -2,9 +2,10 @@
   "name": "league-wftda-ranking",
   "version": "2.0.0",
   "description": "WFTDA Rankings Widget",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "echo \"NPM Start not yet implemented\" && exit 1",
+    "build": "echo \"Build not yet implemented\" && exit 1",
+    "test": "echo \"Test not yet implemented\" && exit 1"
   },
   "repository": {
     "type": "git",
