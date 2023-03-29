@@ -3,9 +3,19 @@
   "version": "2.0.0",
   "description": "WFTDA Rankings Widget",
   "scripts": {
-    "start": "echo \"NPM Start not yet implemented\" && exit 1",
-    "build": "echo \"Build not yet implemented\" && exit 1",
-    "test": "echo \"Test not yet implemented\" && exit 1"
+		"build": "wp-scripts build",
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"lint:md:docs": "wp-scripts lint-md-docs",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start",
+		"test:e2e": "wp-scripts test-e2e",
+		"test:unit": "wp-scripts test-unit-js"
   },
   "repository": {
     "type": "git",
