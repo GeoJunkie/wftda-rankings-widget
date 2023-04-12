@@ -42,6 +42,11 @@ class League_Wftda_Ranking_Public
 	private $version;
 
 	/**
+	 * 
+	 */
+	private $scripts_defs_paths;
+
+	/**
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
@@ -53,6 +58,7 @@ class League_Wftda_Ranking_Public
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
+		$this->scripts_defs_paths = include plugin_dir_path( __DIR__ ) . 'build/league-wftda-ranking-public.asset.php';
 	}
 
 	/**
@@ -75,7 +81,7 @@ class League_Wftda_Ranking_Public
 		 * class.
 		 */
 
-		wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/league-wftda-ranking-public.css', array(), $this->version, 'all');
+		wp_enqueue_style($this->plugin_name, plugin_dir_url(__DIR__) . 'build/league-wftda-ranking-public.css', array(), $this->scripts_defs_paths['version'], 'all');
 		
 	}
 
@@ -99,7 +105,7 @@ class League_Wftda_Ranking_Public
 		 * class.
 		 */
 
-		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/league-wftda-ranking-public.js', array('jquery'), $this->version, false);
+		wp_enqueue_script($this->plugin_name, plugin_dir_url(__DIR__) . 'build/league-wftda-ranking-public.js', array('jquery'), $this->scripts_defs_paths['version'], false);
 	}
 
 		/**
