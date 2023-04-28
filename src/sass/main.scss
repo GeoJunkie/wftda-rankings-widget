@@ -58,7 +58,8 @@
     /* line-height: 2.8; */
 }
 
-.lwr-world-ranking, .lwr-regional-ranking {
+.lwr-world-ranking,
+.lwr-regional-ranking {
     color: #f5a2c6;
     font-weight: 700;
 }
@@ -68,7 +69,8 @@
     margin: auto;
 }
 
-.lwr-win-loss, .lwr-info-button {
+.lwr-win-loss,
+.lwr-info-button {
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -103,7 +105,7 @@
 }
 
 .lwr-hidden {
-    display:none;
+    display: none;
 }
 
 .lwr-overlay {
@@ -113,9 +115,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: 
+    background-color:
 
-    hsla(0,0%,100%,.5);
+        hsla(0, 0%, 100%, .5);
     z-index: 100;
     transition: opacity .3s ease-in-out;
 
@@ -135,9 +137,9 @@
     transform: translate3d(0, 0, 0);
     animation: growIn 0.3s ease-out;
     animation-fill-mode: forwards;
-  }
-  
-  .lwr-popup-content {
+}
+
+.lwr-popup-content {
     padding: 1rem 1.25rem 2rem;
     pointer-events: auto;
     position: relative;
@@ -148,27 +150,23 @@
     max-width: 500px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     background: white;
-  }
 
-  @media screen and (min-width: 530px) {
-    .lwr-popup-content {
-      margin: 0 auto;
+    @media screen and (min-width: 530px) {
+        margin: 0 auto;
     }
-  }
 
-  @media screen and (min-width: 640px) {
-    .lwr-popup-content {
-      padding: 1rem 2rem 2rem;
+    @media screen and (min-width: 640px) {
+        padding: 1rem 2rem 2rem;
     }
-  }
 
-  .lwr-popup-content .lwr-popup-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-  }
+    .lwr-popup-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+    }
 
-  .lwr-popup-content p {
-    line-height: 1.6;
-  }
+    p {
+        line-height: 1.6;
+    }
+}
