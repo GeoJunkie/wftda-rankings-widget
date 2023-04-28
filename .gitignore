@@ -2,6 +2,10 @@
 .idea
 .vscode
 
+# ignore generated files
+vendor/*
+league-wftda-ranking.zip
+
 # ignore log files and databases
 *.log
 *.sql
