@@ -2,8 +2,9 @@
 .idea
 .vscode
 
-# ignore generated files
-vendor/*
+# ignore build files
+vendor
+node_modules
 league-wftda-ranking.zip
 
 # ignore log files and databases
@@ -11,4 +12,3 @@ league-wftda-ranking.zip
 *.sql
 *.sqlite
 .DS_Store
-node_modules
