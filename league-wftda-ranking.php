@@ -9,7 +9,7 @@
  * Plugin Name:       WFTDA Rankings Widget
  * Plugin URI:        https://github.com/GeoJunkie/league-wftda-ranking
  * Description:       A widget to show a WFTDA league's ranking information in a widget.
- * Version:           1.0.2
+ * Version:           2.0.0-dev
  * Author:            Mike Straw (aka Stray Taco)
  * Author URI:        http://bit.ly/Stray_Taco
  * License:           GPL-2.0+
@@ -27,7 +27,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Current plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
  */
-define( 'LEAGUE_WFTDA_RANKING_VERSION', '1.0.2' );
+define( 'LEAGUE_WFTDA_RANKING_VERSION', '2.0.0-dev' );
 
 /**
  * The code that runs during plugin activation.
