@@ -1,31 +1,46 @@
 {
-  "name": "league-wftda-ranking",
-  "version": "2.0.0",
-  "description": "WFTDA Rankings Widget",
-  "scripts": {
-    "start": "echo \"NPM Start not yet implemented\" && exit 1",
-    "build": "echo \"Build not yet implemented\" && exit 1",
-    "test": "echo \"Test not yet implemented\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GeoJunkie/league-wftda-ranking.git"
-  },
-  "keywords": [
-    "roller derby",
-    "wftda",
-    "sports",
-    "rankings",
-    "stats"
-  ],
-  "author": "Mike Straw (aka Stray Taco)",
-  "license": "GPL-2.0-or-later",
-  "bugs": {
-    "url": "https://github.com/GeoJunkie/league-wftda-ranking/issues"
-  },
-  "homepage": "https://github.com/GeoJunkie/league-wftda-ranking#readme",
-  "engines": {
-    "node": "^18.12.0",
-    "npm": "^8.19.2"
-  }
+	"name": "league-wftda-ranking",
+	"version": "2.0.0",
+	"description": "WFTDA Rankings Widget",
+	"scripts": {
+		"build": "wp-scripts build src/js/league-wftda-ranking-public.js",
+		"build:public": "wp-scripts build public/js/league-wftda-ranking-public.js",
+		"build:admin": "wp-scripts build admin/js/league-wftda-ranking-admin.js",
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"lint:md:docs": "wp-scripts lint-md-docs",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start",
+		"test:e2e": "wp-scripts test-e2e",
+		"test:unit": "wp-scripts test-unit-js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/GeoJunkie/league-wftda-ranking.git"
+	},
+	"keywords": [
+		"roller derby",
+		"wftda",
+		"sports",
+		"rankings",
+		"stats"
+	],
+	"author": "Mike Straw (aka Stray Taco)",
+	"license": "GPL-2.0-or-later",
+	"bugs": {
+		"url": "https://github.com/GeoJunkie/league-wftda-ranking/issues"
+	},
+	"homepage": "https://github.com/GeoJunkie/league-wftda-ranking#readme",
+	"engines": {
+		"node": "^18.12.0",
+		"npm": "^8.19.2"
+	},
+	"dependencies": {
+		"@wordpress/scripts": "^26.1.0"
+	}
 }
