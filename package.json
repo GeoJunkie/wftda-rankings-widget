@@ -3,9 +3,7 @@
 	"version": "2.0.0",
 	"description": "WFTDA Rankings Widget",
 	"scripts": {
-		"build": "wp-scripts build src/js/league-wftda-ranking-public.js",
-		"build:public": "wp-scripts build public/js/league-wftda-ranking-public.js",
-		"build:admin": "wp-scripts build admin/js/league-wftda-ranking-admin.js",
+		"build": "wp-scripts build",
 		"check-engines": "wp-scripts check-engines",
 		"check-licenses": "wp-scripts check-licenses",
 		"format": "wp-scripts format",
@@ -37,10 +35,10 @@
 	},
 	"homepage": "https://github.com/GeoJunkie/league-wftda-ranking#readme",
 	"engines": {
-		"node": "^18.12.0",
-		"npm": "^8.19.2"
+		"node": "^18.16.0",
+		"npm": "^9.5.1"
 	},
-	"dependencies": {
-		"@wordpress/scripts": "^26.1.0"
+	"devDependencies": {
+		"@wordpress/scripts": "^26.3.0"
 	}
 }
