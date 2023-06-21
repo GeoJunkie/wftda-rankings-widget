@@ -7,3 +7,5 @@
 *.sql
 *.sqlite
 .DS_Store
+node_modules
+league-wftda-ranking.zip
