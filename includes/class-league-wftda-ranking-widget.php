@@ -62,7 +62,7 @@ class League_Wftda_Ranking_Widget extends WP_Widget {
 	public function form( $instance ) {
 		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'New title', 'text_domain' );
 		$league = ! empty( $instance['league'] ) ? $instance['league'] : esc_html__( 'league-slug', 'text_domain');
-		require plugin_dir_path( dirname( __FILE__ ) ) . 'widgets/partials/league-wftda-ranking-form.php';
+		require plugin_dir_path( dirname( __FILE__ ) ) . '/includes/partials/league-wftda-ranking-form.php';
 	}
 
 	/**

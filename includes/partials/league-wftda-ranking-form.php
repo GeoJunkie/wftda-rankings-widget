@@ -9,7 +9,7 @@
  * @since      1.0.0
  *
  * @package    League_Wftda_Ranking
- * @subpackage League_Wftda_Ranking/widgets/partials
+ * @subpackage League_Wftda_Ranking/partials
  */
 ?>
 
