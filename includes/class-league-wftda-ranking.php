@@ -137,7 +137,7 @@ class League_Wftda_Ranking {
 		/**
 		 * The Widget class
 		 */
-		 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'widgets/class-league-wftda-ranking-widget.php';
+		 require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-league-wftda-ranking-widget.php';
 
 		$this->loader = new League_Wftda_Ranking_Loader();
 
