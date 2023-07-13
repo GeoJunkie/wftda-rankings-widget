@@ -8,4 +8,7 @@
 *.sqlite
 .DS_Store
 node_modules
+
+# Ignore builds
 league-wftda-ranking.zip
+build/
