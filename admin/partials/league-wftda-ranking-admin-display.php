@@ -17,4 +17,5 @@
 
 <div class="wrap">
     <h1>We are not the WFTDA</h1>
+    <div id="league-wftda-ranking-admin-display"/>
 </div>

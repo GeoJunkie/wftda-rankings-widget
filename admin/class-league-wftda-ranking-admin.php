@@ -22,6 +22,8 @@
  */
 class League_Wftda_Ranking_Admin {
 
+	private $scripts_defs_paths;
+
 	/**
 	 * The ID of this plugin.
 	 *
@@ -50,7 +52,9 @@ class League_Wftda_Ranking_Admin {
 	public function __construct( $plugin_name, $version ) {
 
 		$this->plugin_name = $plugin_name;
-		$this->version = $version;
+		$this->version     = $version;
+
+		$this->scripts_defs_paths = include plugin_dir_path( __DIR__ ) . 'build/admin/admin.asset.php';
 
 	}
 
@@ -96,29 +100,28 @@ class League_Wftda_Ranking_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/league-wftda-ranking-admin.js', array( 'jquery' ), $this->version, false );
+		 wp_enqueue_script( $this->plugin_name, plugin_dir_url( __DIR__ ) . 'build/admin/admin.js', $this->scripts_defs_paths['dependencies'], $this->scripts_defs_paths['version'], true );
 
 	}
 
 	/**
 	 * Display the admin page
-	 * 
+	 *
 	 * @since 1.0.0
 	 */
-	public function display_admin_page()
-	{
-		if (!current_user_can( 'manage_options' )) {
+	public function display_admin_page() {
+		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
-		include_once(plugin_dir_path( __FILE__ ) . 'partials/league-wftda-ranking-admin-display.php');
+		include_once plugin_dir_path( __FILE__ ) . 'partials/league-wftda-ranking-admin-display.php';
 	}
 
 	/**
 	 * Create hook for the admin page
-	 * 
+	 *
 	 * @since 1.0.0
 	 */
 	public function add_admin_page() {
-		add_options_page( 'League WFTDA Rankings', 'League WFTDA Rankings', 'manage_options', 'league-wftda-ranking', array($this, 'display_admin_page'));
+		add_options_page( 'League WFTDA Rankings', 'League WFTDA Rankings', 'manage_options', 'league-wftda-ranking', array( $this, 'display_admin_page' ) );
 	}
 }
