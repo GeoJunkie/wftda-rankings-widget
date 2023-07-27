@@ -4,6 +4,7 @@
 	"description": "WFTDA Rankings Widget",
 	"scripts": {
 		"build": "wp-scripts build",
+		"build:admin": "wp-scripts build src/js/admin.js --output-path=build/admin",
 		"check-engines": "wp-scripts check-engines",
 		"check-licenses": "wp-scripts check-licenses",
 		"format": "wp-scripts format",
@@ -37,6 +38,11 @@
 	"engines": {
 		"node": "^18.16.0",
 		"npm": "^9.5.1"
+	},
+	"dependencies": {
+		"react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-router-dom": "6.2.2"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^26.3.0"

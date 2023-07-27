@@ -96,7 +96,7 @@ class League_Wftda_Ranking_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/league-wftda-ranking-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . '../build/admin/admin.js', array( 'react', 'wp-element' ), $this->version, true );
 
 	}
 
