@@ -44,8 +44,8 @@ class League_Wftda_Ranking_Options
       'lwr_leagues' => '',        // An array of the stored leagues (see $league_info)
       'lwr_refresh_hours' => 24,  // Number of hours before retrieving updated league information
       'lwr_gpa_sf_explanation' => '',  // Explanation of GPA and SF from stats.wftda.com (refreshes with league info)
-      'lwr_site_url' => 'https://stats.wftda.com', // Root URL for the WFTDA Stats Site
-      'lwr_leagues_url' => 'https://stats.wftda.com/team/', // Base URL for WFTDA leagues
+      'lwr_site_url' => LEAGUE_WFTDA_SITE_URL, // Root URL for the WFTDA Stats Site
+      'lwr_leagues_url' => LEAGUE_WFTDA_LEAGUES_URL, // Base URL for WFTDA leagues
       'lwr_delete_on_uninstall' => false // If true, all options will be erased on uninstall
     );
 
@@ -110,8 +110,8 @@ class League_Wftda_Ranking_Options
    * @return array league_info array.
    */
   public function get_league_info($slug)
-  {
-    if (array_key_exists($slug, $this->options['lwr_leagues'])) {
+  { 
+    if (! empty($this->options['lwr_leagues']) && array_key_exists($slug, $this->options['lwr_leagues'])) {
 
       foreach ($this->options['lwr_leagues'] as $this_league => $league) {
         if ($this_league == $slug) {

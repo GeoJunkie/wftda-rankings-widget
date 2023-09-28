@@ -81,8 +81,8 @@ class League_Wftda_Ranking_League {
     public function refresh() {
       $this->league_data['slug'] = $this->slug;
 
-      $stats_site = get_option('lwr_site_url');
-      $url = get_option('lwr_leagues_url') . $this->slug;
+      $stats_site = LEAGUE_WFTDA_SITE_URL;
+      $url = LEAGUE_WFTDA_LEAGUES_URL . $this->slug;
 
       $response = wp_remote_get($url);
 
