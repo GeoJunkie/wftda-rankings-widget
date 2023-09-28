@@ -1,8 +1,8 @@
 {
-  "name": "league-wftda-ranking",
-  "version": "2.0.0",
-  "description": "WFTDA Rankings Widget",
-  "scripts": {
+	"name": "league-wftda-ranking",
+	"version": "2.0.0",
+	"description": "WFTDA Rankings Widget",
+	"scripts": {
 		"build": "wp-scripts build",
 		"check-engines": "wp-scripts check-engines",
 		"check-licenses": "wp-scripts check-licenses",
@@ -16,29 +16,29 @@
 		"start": "wp-scripts start",
 		"test:e2e": "wp-scripts test-e2e",
 		"test:unit": "wp-scripts test-unit-js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GeoJunkie/league-wftda-ranking.git"
-  },
-  "keywords": [
-    "roller derby",
-    "wftda",
-    "sports",
-    "rankings",
-    "stats"
-  ],
-  "author": "Mike Straw (aka Stray Taco)",
-  "license": "GPL-2.0-or-later",
-  "bugs": {
-    "url": "https://github.com/GeoJunkie/league-wftda-ranking/issues"
-  },
-  "homepage": "https://github.com/GeoJunkie/league-wftda-ranking#readme",
-  "engines": {
-    "node": "^18.12.0",
-    "npm": "^8.19.2"
-  },
-  "dependencies": {
-    "@wordpress/scripts": "^26.1.0"
-  }
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/GeoJunkie/league-wftda-ranking.git"
+	},
+	"keywords": [
+		"roller derby",
+		"wftda",
+		"sports",
+		"rankings",
+		"stats"
+	],
+	"author": "Mike Straw (aka Stray Taco)",
+	"license": "GPL-2.0-or-later",
+	"bugs": {
+		"url": "https://github.com/GeoJunkie/league-wftda-ranking/issues"
+	},
+	"homepage": "https://github.com/GeoJunkie/league-wftda-ranking#readme",
+	"engines": {
+		"node": "^18.12.0",
+		"npm": "^8.19.2"
+	},
+	"dependencies": {
+		"@wordpress/scripts": "^26.1.0"
+	}
 }
