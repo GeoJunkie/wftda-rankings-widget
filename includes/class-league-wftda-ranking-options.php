@@ -45,7 +45,7 @@ class League_Wftda_Ranking_Options
       'lwr_refresh_hours' => 24,  // Number of hours before retrieving updated league information
       'lwr_gpa_sf_explanation' => '',  // Explanation of GPA and SF from stats.wftda.com (refreshes with league info)
       'lwr_site_url' => 'https://stats.wftda.com', // Root URL for the WFTDA Stats Site
-      'lwr_leagues_url' => 'https://stats.wftda.com/league/', // Base URL for WFTDA leagues
+      'lwr_leagues_url' => 'https://stats.wftda.com/team/', // Base URL for WFTDA leagues
       'lwr_delete_on_uninstall' => false // If true, all options will be erased on uninstall
     );
 

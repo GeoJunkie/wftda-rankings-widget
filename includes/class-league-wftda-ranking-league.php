@@ -18,7 +18,7 @@ class League_Wftda_Ranking_League {
    * League slug.
    *
    * @since 1.0.0
-   * @var string $slug The slug of the league this instance pertains to (https://stats.wftda.com/league/{slug}).
+   * @var string $slug The slug of the league this instance pertains to (https://stats.wftda.com/team/{slug}).
    */
   public $slug;
 
@@ -27,7 +27,7 @@ class League_Wftda_Ranking_League {
    *
    * @since 1.0.0
    * @access protected
-   * @var array league Hold all the league's current information (Obtained from https://stats.wftda.com/league/{slug}).
+   * @var array league Hold all the league's current information (Obtained from https://stats.wftda.com/team/{slug}).
    */
   protected $league_data;
 
@@ -57,7 +57,7 @@ class League_Wftda_Ranking_League {
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 * @param      string    league       The slug of the league this instance pertains to (https://stats.wftda.com/league/{slug}).
+	 * @param      string    league       The slug of the league this instance pertains to (https://stats.wftda.com/team/{slug}).
 	 */
 	public function __construct( $league ) {
     $this->slug = $league;
