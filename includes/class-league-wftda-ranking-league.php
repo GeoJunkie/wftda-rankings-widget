@@ -103,7 +103,7 @@ class League_Wftda_Ranking_League {
       $xpath = new DOMXPath($dom);
       $stats = array();
 
-      $logo_node = $xpath->query("//*[@class='leagueMain--image']");
+      $logo_node = $xpath->query("//*[@class='teamMain--image']");
 
       if ($logo_node->length == 0) {
           return "Logo Not Found";
@@ -111,18 +111,18 @@ class League_Wftda_Ranking_League {
 
       $this->league_data['logo'] = $logo_node->item(0)->attributes->getNamedItem("src")->nodeValue;
 
-      $league_name_node = $xpath->query("//*[@class='leagueMainStatsInner']/h1");
+      $league_name_node = $xpath->query("//*[@class='teamMainStatsInner']/h1");
 
       if ($league_name_node->length == 0) {
-          return "League Name Not Found";
+          return "Team Name Not Found";
       }
 
       $this->league_data['league'] = $league_name_node->item(0)->nodeValue;
 
-      $league_location_node = $xpath->query("//*[@class='leagueMainStats--location']");
+      $league_location_node = $xpath->query("//*[@class='teamMainStats--location']");
       $this->league_data['location'] = $league_location_node->item(0)->nodeValue;
 
-      $stats_nodes = $xpath->query("//*[@class='leagueMainStats--rankingStats rankingsStats']/*");
+      $stats_nodes = $xpath->query("//*[@class='teamMainStats--rankingStats rankingsStats']/*");
 
       if ($stats_nodes->length == 0) {
           return "Stats Not Found";
@@ -134,7 +134,7 @@ class League_Wftda_Ranking_League {
       $this->league_data['strength_factor'] = $stats_nodes->item(1)->nodeValue;
       $this->gpa_sf_explanation = $dom->saveHTML($stats_nodes->item(3));
 
-      $rank_nodes = $xpath->query("//*[@class='leagueMainStats--rank rankText']");
+      $rank_nodes = $xpath->query("//*[@class='teamMainStats--rank rankText']");
 
       // World ranking listed first, Regional is second
 
@@ -147,7 +147,7 @@ class League_Wftda_Ranking_League {
 
       // For win/loss we'll be allowing for an option to choose how many to show (up to 5 since that's what the stats page shows)
 
-      $win_loss_nodes = $xpath->query("//*[@class='formCircles leagueMainStats--formCircles']/span");
+      $win_loss_nodes = $xpath->query("//*[@class='formCircles teamMainStats--formCircles']/span");
 
       if ($win_loss_nodes->length == 0) {
           return "Win/Loss info not found";
