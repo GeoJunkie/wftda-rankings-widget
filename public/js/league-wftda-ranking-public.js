@@ -1,4 +1,6 @@
-(function ($) {
+import '../css/league-wftda-ranking-public.css';
+
+( function ( $ ) {
 	'use strict';
 
 	/**
