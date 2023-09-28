@@ -35,10 +35,11 @@
 		<div class="lwr-regional-ranking"><?php echo $league_data['regional_ranking'] ?></div>
 		<div class="lwr-win-losses">
 			<?php
+			if ( ! empty($league_data['win_loss_info'])) {
 			foreach ($league_data['win_loss_info'] as $game_result) { ?>
 
 				<span class="lwr-win-loss lwr-win-loss-<?php echo $game_result ?>"><?php echo $game_result ?></span>
-			<?php } ?>
+			<?php }} ?>
 		</div>
 	</div>
 	<div class="league-wfda-stats-link">

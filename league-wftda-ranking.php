@@ -30,6 +30,12 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'LEAGUE_WFTDA_RANKING_VERSION', '1.0.2' );
 
 /**
+ * Plugin constants
+ */
+define( 'LEAGUE_WFTDA_SITE_URL', 'https://stats.wftda.com' );
+define( 'LEAGUE_WFTDA_LEAGUES_URL', 'https://stats.wftda.com/team/' );
+
+/**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-league-wftda-ranking-activator.php
  */

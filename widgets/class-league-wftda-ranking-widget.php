@@ -14,9 +14,9 @@
 
 class League_Wftda_Ranking_Widget extends WP_Widget {
 
-  /**
-	 * Register widget with WordPress.
-	 */
+	/**
+	   * Register widget with WordPress.
+	   */
 	function __construct() {
 		parent::__construct(
 			'league_wftda_ranking', // Base ID
@@ -41,13 +41,13 @@ class League_Wftda_Ranking_Widget extends WP_Widget {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 		}
 
-		$league = new League_Wftda_Ranking_League($instance['league']);
+		$league      = new League_Wftda_Ranking_League( $instance['league'] );
 		$league_data = $league->get_league_data();
 
 		// TODO: Allow settings to activate/deactivate these
-		$url = get_option('lwr_leagues_url') . $league_data['slug'];
+		$url = LEAGUE_WFTDA_LEAGUES_URL . $league_data['slug'];
 
-		include('partials/league-wftda-ranking-widget.php');
+		include 'partials/league-wftda-ranking-widget.php';
 
 		echo $args['after_widget'];
 	}
@@ -60,8 +60,8 @@ class League_Wftda_Ranking_Widget extends WP_Widget {
 	 * @param array $instance Previously saved values from database.
 	 */
 	public function form( $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'New title', 'text_domain' );
-		$league = ! empty( $instance['league'] ) ? $instance['league'] : esc_html__( 'league-slug', 'text_domain');
+		$title  = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'New title', 'text_domain' );
+		$league = ! empty( $instance['league'] ) ? $instance['league'] : esc_html__( 'league-slug', 'text_domain' );
 		require plugin_dir_path( dirname( __FILE__ ) ) . 'widgets/partials/league-wftda-ranking-form.php';
 	}
 
@@ -76,8 +76,8 @@ class League_Wftda_Ranking_Widget extends WP_Widget {
 	 * @return array Updated safe values to be saved.
 	 */
 	public function update( $new_instance, $old_instance ) {
-		$instance = array();
-		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? sanitize_text_field( $new_instance['title'] ) : '';
+		$instance           = array();
+		$instance['title']  = ( ! empty( $new_instance['title'] ) ) ? sanitize_text_field( $new_instance['title'] ) : '';
 		$instance['league'] = ( ! empty( $new_instance['league'] ) ) ? sanitize_text_field( $new_instance['league'] ) : '';
 
 		return $instance;
