@@ -3,9 +3,6 @@ on:
   push:
     tags:
     - "*"
-    # For testing. Delete before merging.
-    branches:
-    - 33-automate-deployment-to-wporg
 jobs:
   tag:
     name: New tag
