@@ -28,6 +28,7 @@ jobs:
       env:
         SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
         SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        SLUG: wftda-rankings-widget
     - name: Create GitHub release
       uses: softprops/action-gh-release@v1
       with:
