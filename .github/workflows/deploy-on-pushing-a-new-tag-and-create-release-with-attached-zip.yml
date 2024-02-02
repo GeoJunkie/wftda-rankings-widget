@@ -1,0 +1,36 @@
+name: Deploy and Release Plugin
+on:
+  push:
+    tags:
+    - "*"
+    # For testing. Delete before merging.
+    branches:
+    - 33-automate-deployment-to-wporg
+jobs:
+  tag:
+    name: New tag
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+# We don't currently need to build the plugin. This will be added in v2.
+#    - name: Build
+#      run: |
+#        npm install
+#        npm run build
+    - name: WordPress Plugin Deploy
+      id: deploy
+      uses: 10up/action-wordpress-plugin-deploy@stable
+      with:
+        generate-zip: true
+# Dry run until we know it'll work
+        dry-run: true
+      env:
+        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+    - name: Create GitHub release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: ${{github.workspace}}/${{ github.event.repository.name }}.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
