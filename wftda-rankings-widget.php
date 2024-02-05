@@ -9,7 +9,7 @@
  * Plugin Name:       WFTDA Rankings Widget
  * Plugin URI:        https://wordpress.org/plugins/wftda-rankings-widget/
  * Description:       A widget to show a WFTDA league's ranking information in a widget.
- * Version:           1.0.2
+ * Version:           1.1.0
  * Author:            Mike Straw (aka Stray Taco)
  * Author URI:        http://bit.ly/Stray_Taco
  * License:           GPL-2.0+
