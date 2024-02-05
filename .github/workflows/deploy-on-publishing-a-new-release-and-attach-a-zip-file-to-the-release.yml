@@ -1,7 +1,6 @@
 name: Deploy to WordPress.org Repository
 on:
   release:
-
     # run only when a new release is published, but not when it's classified as a pre-release.
     types: [released]
 jobs:
@@ -21,8 +20,6 @@ jobs:
       uses: 10up/action-wordpress-plugin-deploy@stable
       with:
         generate-zip: true
-# Dry run until we know it'll work
-        dry-run: true
       env:
         SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
         SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
