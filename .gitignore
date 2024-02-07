@@ -2,6 +2,12 @@
 .idea
 .vscode
 
+# ignore build files
+vendor
+node_modules
+build
+league-wftda-ranking.zip
+
 # ignore log files and databases
 *.log
 *.sql

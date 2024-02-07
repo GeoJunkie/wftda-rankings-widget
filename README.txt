@@ -2,14 +2,16 @@
 Contributors: mikestraw
 Tags: roller derby, wftda, sports, rankings, stats
 Requires at least: 3.0.1
-Tested up to: 5.8
-Stable tag: 4.3
+Tested up to: 6.4.3
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 A widget to show a WFTDA league's ranking information in a widget.
 
 == Description ==
+
+**NOTE:** This widget is not currently compatible with block themes. When installing on WordPress versions 6.0 or higher, you will also need to install the [Classic Widgets plugin](https://wordpress.org/plugins/classic-widgets/).
 
 Add a widget to your site with the WFTDA stats from stats.wftda.com.
 
@@ -38,6 +40,7 @@ There are measures in place to ensure we don't overload the stats site:
 
 1. Install directly from WordPress.org, upload `wftda-rankings-widget.zip` under **Plugins > Add New**, or install via WP-CLI using `wp plugin install wftda-rankings-widget`
 1. Activate the plugin through the 'Plugins' menu in WordPress
+1. If you are installing on a site with WordPress 6.0 or higher, also install and activate the [Classic Widgets plugin](https://wordpress.org/plugins/classic-widgets/).
 1. Add the widget in the Customizer
 1. The League Slug should match the portion of the address of your league's stats after the last slash. e.g., if the address for your league's stats page is `https://stats.wftda.com/league/super-fantastic-derby`, enter `super-fantastic-derby` under League Slug
 
@@ -60,6 +63,10 @@ There are measures in place to ensure we don't overload the stats site:
 2. Widget settings
 
 == Changelog ==
+
+= 1.1.0 - 2024-02-05 =
+
+* Updated to account for new URL structure on stats.wftda.com
 
 = 1.0.2 - 2020-04-12 =
 
